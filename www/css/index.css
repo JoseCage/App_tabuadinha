@@ -1,0 +1,77 @@
+body {
+	margin:0;
+	font-family:candara;
+	background-image:url('fundo.jpg');
+}
+header {
+	width:100%;
+	height:auto;
+	padding-top:10px;
+	padding-bottom:10px;
+	background-image:-webkit-linear-gradient(#fef3b2,#feda58);
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+}
+#whapper {
+	width:100%;
+	height:auto;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+footer {
+	width:100%;
+	height:auto;
+	min-height:30px;
+	background:black;
+	text-align:center;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+footer p {
+	color:white;
+	opacity:0.60;
+}
+input {
+	width:100px;
+	padding:5px;
+	border:1px solid black;
+	border-radius:10px;
+	outline:none;
+	box-shadow:gray 1px 1px 2px inset;
+	font-size:30px;
+	text-align:center;
+}
+button {
+	padding:10px;
+	border-radius:3px;
+	background:#336600;
+	background-image:-webkit-linear-gradient(#6ba235,#336600);
+	border:1px solid black;
+	color:white;
+	font-weight:bold;
+	font-size:30px;
+}
+#saida {
+	width:300px;
+	margin:auto;
+	display:block;
+	padding:10px;
+	margin:auto;
+	background:;
+	font-size:40px;
+	text-align:left;
+	box-shadow:silver 1px 1px 3px;
+	border:1px dotted silver;
+	background:rgba(240,240,240, 0.5);
+}
+span {
+	color:#003300;
+	font-weight:bold;
+}
+.x {
+	opacity:0.60;
+}
+
+table {
+	margin:auto;
+}
