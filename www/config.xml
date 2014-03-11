@@ -6,7 +6,7 @@
         id        = "com.loiane.phonegap"
         version   = "2.9.0">
 
-    <name>Tabuadinha</name>
+    <name> Nossa Tabuadinha</name>
 
     <description>
         App gera tabuadas de todos os números digitados.

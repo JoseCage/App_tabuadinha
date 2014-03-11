@@ -26,16 +26,28 @@
 	<title>Tabuadinha</title>
 </head>
 <body>
+<div id="escolherOperacao">
+  <h1>Nossa Tabuadinha</h1>
+</div><!-- end escolher operação -->
 
-  <header>
+<div id="areaMenus">
+  <button type="button" class="menu" id="buttonAdicao">+</button>
+  <button type="button" class="menu" id="buttonSubtracao">-</button>
+  <button type="button" class="menu" id="buttonMultiplicacao">x</button>
+  <button type="button" class="menu" id="buttonDivisao">&divide;</button>
+</div><!-- end area meus -->
+
+
+
+  <!--<header>-->
     <table>
       <tr>
-        <td> <button type="button" id="buttonDiminui">-1</button> </td>
-        <td> <input type="number" id="entradaNumber" value="0"/> </td>
-        <td> <button type="button" id="buttonAumenta">+1</button> </td>
+        <td> <button type="button" id="buttonDiminui">&laquo;</button> </td>
+        <td> <input type="number" id="entradaNumber" value="1"/> </td>
+        <td> <button type="button" id="buttonAumenta">&raquo;</button> </td>
       </tr>
     </table>
-  </header>
+ <!-- </header>-->
   <section id="whapper">
     <p id="saida"></p>
   </section>
