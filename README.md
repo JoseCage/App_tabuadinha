@@ -10,4 +10,4 @@
 <p>Temos em mente que um software nunca está pronto, pois melhorias e a introdução de novas funcionalidades podem ser acopladas aos mesmos, sendo assim, vamos beirando novos desafios para melhorar ainda mais a eficiência do nosso trabalho.</p>
 
 
-<center><img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-prn1/t1/1920477_521129044676342_1692372969_n.jpg"/></center>
+<center><img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-prn1/t1/1920477_521129044676342_1692372969_n.jpg"width="200"/></center>
