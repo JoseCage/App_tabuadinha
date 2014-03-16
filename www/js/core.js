@@ -1,7 +1,8 @@
 /////////////////////////////////////////////////////////////////////////////
-// Projeto: APP - Tabuadinha
+// Projeto: APP - Nossa Tabuadinha
 // Autor: Valdiney França
-// Versão: 0.0
+// Email: valdiney.2@hotmail.com
+// Versão: 0.4 ( DATADA EM 16/03/2014 )
 // Data: 07/03/2014
 ////////////////////////////////////////////////////////////////////////////
 
@@ -22,10 +23,9 @@ window.onload = function() {
            buttonAdicao = document.getElementById('buttonAdicao'),
            buttonSubtracao = document.getElementById('buttonSubtracao'),
            buttonMultiplicacao = document.getElementById('buttonMultiplicacao'),
-           buttonDivisao = document.getElementById('buttonDivisao');
+           buttonDivisao = document.getElementById('buttonDivisao'),
+           buttonRomano = document.getElementById('romano');
 
-           
-          
 ////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////
@@ -34,7 +34,11 @@ window.onload = function() {
 
            time =  window.setInterval( function() {
                    saida.innerHTML = '';
-          
+
+///////////////////////////////////////////////////////
+// Definindo o tipo de operação que será executada...
+////////////////////////////////////////////////////// 
+
                buttonAdicao.onclick = function() {
                    tipoOperacao = 'adicao';
                }
@@ -51,7 +55,15 @@ window.onload = function() {
                    tipoOperacao = 'divisao';
                }
 
+               buttonRomano.onclick = function() {
+                   tipoOperacao = 'romano';
+               }
+
 /////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////
+// Destaca o tipo da operação que está sendo realizada...
+//////////////////////////////////////////////////////////
 
               if( tipoOperacao === 'adicao') {
 
@@ -59,6 +71,7 @@ window.onload = function() {
                   buttonSubtracao.classList.remove('menuAtivo');
                   buttonMultiplicacao.classList.remove('menuAtivo');
                   buttonDivisao.classList.remove('menuAtivo');
+                  buttonRomano.classList.remove('menuAtivo');
                   
               }
 
@@ -68,6 +81,7 @@ window.onload = function() {
                   buttonAdicao.classList.remove('menuAtivo');
                   buttonMultiplicacao.classList.remove('menuAtivo');
                   buttonDivisao.classList.remove('menuAtivo');
+                  buttonRomano.classList.remove('menuAtivo');
 
               }
 
@@ -77,6 +91,7 @@ window.onload = function() {
                   buttonAdicao.classList.remove('menuAtivo');
                   buttonSubtracao.classList.remove('menuAtivo');
                   buttonDivisao.classList.remove('menuAtivo');
+                  buttonRomano.classList.remove('menuAtivo');
 
               }
 
@@ -86,8 +101,21 @@ window.onload = function() {
                   buttonMultiplicacao.classList.remove('menuAtivo'); 
                   buttonAdicao.classList.remove('menuAtivo');
                   buttonSubtracao.classList.remove('menuAtivo');
+                  buttonRomano.classList.remove('menuAtivo');
                   
               }
+
+              else if ( tipoOperacao === 'romano' ) {
+
+                  buttonRomano.classList.add('menuAtivo'); 
+                  buttonMultiplicacao.classList.remove('menuAtivo'); 
+                  buttonAdicao.classList.remove('menuAtivo');
+                  buttonSubtracao.classList.remove('menuAtivo');
+                  buttonDivisao.classList.remove('menuAtivo');
+                  
+              }
+
+//////////////////////////////////////////////////////////////////////////////
 
               var entradaNumber =  Number ( document.getElementById('entradaNumber').value ),
            	      cont = null, operacao = null;
@@ -112,7 +140,7 @@ window.onload = function() {
 
                         }
 
-                       else if  ( tipoOperacao === 'multiplicacao' ) {
+                       else if ( tipoOperacao === 'multiplicacao' ) {
                            
                            operacao = entradaNumber * cont;
                            saida.innerHTML += '<center>' + cont + ' <span class="x"> x </span> ' + entradaNumber + ' = <span>' + operacao + '</span><br></center>';
@@ -126,7 +154,7 @@ window.onload = function() {
                            var auxiliar = cont * entradaNumber;
                            operacao =  Math.floor( auxiliar / entradaNumber ) ;
 
-                           if( isNaN( operacao ) ) {
+                           if ( isNaN( operacao ) ) {
                                saida.innerHTML = '<center><small>0 &divide; 0 = 0 <br>Zero dividido por zero será sempre zero! <b>Entendeu?</b></small></center>';
                            }
                            else {
@@ -137,6 +165,92 @@ window.onload = function() {
 
                       } // end else if...
 
+/////////////////////////////////////////////////////////////////
+// Gerando os números Romanos...
+////////////////////////////////////////////////////////////////
+
+                         if ( tipoOperacao === 'romano' ) {
+                           
+
+                             var numero = entradaNumber, auxiliarRomano = numero, saidaRomano = '';
+
+                             while ( numero / 1000 >= 1 ) {
+                                  saidaRomano += 'M'; 
+                                  numero = numero - 1000;
+                             }
+
+                             if ( numero / 900 >= 1 ) {
+                                  saidaRomano += 'CM'; 
+                                  numero = numero - 900;
+                             }
+
+                             if ( numero / 500 >= 1) {
+                                  saidaRomano += 'D';
+                                  numero = numero - 500;
+                             } 
+
+                             if ( numero / 400 >= 1 ) { 
+                                  saidaRomano += 'CD'; 
+                                  numero = numero - 400;
+                             }
+
+                            while ( numero / 100 >= 1 ) { 
+                                 saidaRomano += 'C'; 
+                                 numero = numero - 100;
+                             }
+
+                             if ( numero / 90 >= 1 ) { 
+                                  saidaRomano += 'XC'; 
+                                  numero = numero - 90;
+                             }
+
+                             if ( numero / 50 >= 1 ) { 
+                                  saidaRomano += 'L'; 
+                                  numero = numero - 50;
+                             }
+
+                             if ( numero / 40 >= 1 ) { 
+                                  saidaRomano += 'XL'; 
+                                  numero = numero - 40;
+                             }
+
+                            while ( numero / 10 >= 1 ) { 
+                                 saidaRomano += 'X';
+                                 numero = numero - 10;
+                             }
+
+                             if ( numero / 9 >= 1 ) { 
+                                  saidaRomano += 'IX'; 
+                                  numero = numero - 9;
+                             }
+
+                             if ( numero / 5 >= 1 ) { 
+                                  saidaRomano += 'V'; 
+                                  numero = numero - 5;
+                             }
+
+                             if ( numero / 4 >= 1 ) { 
+                                  saidaRomano += 'IV'; 
+                                  numero = numero - 4;
+                             }
+
+                            while ( numero >= 1 ) { 
+                                 saidaRomano += 'I'; 
+                                 numero = numero - 1;
+                            }
+
+                           if ( entradaNumber === 0 ) {
+                                saida.innerHTML += '<center>Os romanos desconheciam o zero! </center>';
+                                break;
+                            }
+
+                           else {
+                               saida.innerHTML += '<center>' + auxiliarRomano + '<span class="x"> = </span>' + saidaRomano + '</center>';
+                                break;
+                            }
+
+                          } // end tipo operação romano...
+
                     } // end firts loop...
 
 
@@ -144,9 +258,9 @@ window.onload = function() {
    
 ////////////////////////////////////////////////////
 
-///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
 // Incrementa sempre o número 1 ao valor alocado na variável (aumenta)...
-//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
 
            buttonAumenta.onclick = function() {
                
