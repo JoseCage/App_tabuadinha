@@ -1,7 +1,7 @@
 <h1>Nossa tabuadinha - APP para Android</h1>
 ==============
 
-
+<img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc1/t1/10009314_523995344389712_2037172917_n.jpg"/>
 
 <p>A nossa tabuadinha é um aplicativo para Android criado com o intuito de ser mais uma ferramenta visando o estudo sobre matemática. Quem nunca se deparou diante de uma tabuada? Geralmente estimulado a estuda-la pelo pai, mãe ou professores! Faz parte de toda uma rotina escolar o aprendizado das operações básicas, como adição, subtração, multiplicação e divisão! O que a nossa tabuadinha faz é trazer para o âmbito móvel computacional justamente o que tínhamos e temos em formato impresso. De forma alguma a nossa tabuadinha pode ser vista como algo superior aos formatos impressos, pois estes são sem sobra de duvidas, ainda a melhor forma de leitura! </p>
 
