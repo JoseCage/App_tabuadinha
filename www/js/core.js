@@ -131,12 +131,20 @@ window.onload = function() {
 
                        else if ( tipoOperacao === 'subtracao' ) {
 
+                         if ( entradaNumber < 0 ) {
+
+                           saida.innerHTML = '<center>Não faz sentido digitar números negativos neste tipo de operação.</center>';
+                         }
+                         else {
+
                          for ( cont = entradaNumber; cont <= ( 10 + entradaNumber ) - 1; cont++ ) {
 
                            operacao = cont - entradaNumber;
                            saida.innerHTML += '<center>' + cont + ' <span class="x"> - </span> ' + entradaNumber + ' = <span>' + operacao + '</span><br></center>';
                           
-                          }
+                           }
+
+                         } // end else...
 
                         }
 
@@ -244,9 +252,13 @@ window.onload = function() {
                                 break;
                             }
 
+                            else if ( entradaNumber < 0 ) {
+                              saida.innerHTML = '<center>Em Algarismo Romano os números negativos eram considerados falsos e absurdos.</center>';
+                            }
+
                            else {
                                saida.innerHTML += '<center>' + auxiliarRomano + '<span class="x"> = </span>' + saidaRomano + '</center>';
-                                break;
+                               break;
                             }
 
                           } // end tipo operação romano...
@@ -265,7 +277,7 @@ window.onload = function() {
            buttonAumenta.onclick = function() {
                
                  aumenta  = aumenta + 1;
-                 document.getElementById('entradaNumber').value = aumenta;
+                 entradaNumber.value = aumenta;
               
            }
 
@@ -280,10 +292,10 @@ window.onload = function() {
                   if ( aumenta < 1 ) {
 
                        aumenta = 0;
-                       document.getElementById('entradaNumber').value = aumenta;
+                       entradaNumber.value = aumenta;
                   }
                   else {
-                       document.getElementById('entradaNumber').value = aumenta;
+                       entradaNumber.value = aumenta;
                  }
            }
 
