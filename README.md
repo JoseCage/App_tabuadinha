@@ -9,6 +9,7 @@
 
 <p>Temos em mente que um software nunca está pronto, pois melhorias e introdução de novas funcionalidades podem ser acopladas aos mesmos, sendo assim, vamos beirando novos desafios para melhorar ainda mais a eficiência do nosso trabalho.</p>
 <a href="http://codepen.io/valdiney/full/eByAd" target="_blank">Teste a versão Online &raquo;</a>
+<a href="https://build.phonegap.com/apps/812283/download/android" target="_blank">Baixe a versão para Andoid &raquo;</a>
 
 <center><img src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-prn2/t1/1782099_521010078021572_1485595390_n.jpg" width="150"/></center>
 
